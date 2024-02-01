@@ -12,7 +12,6 @@ file_open = open('Wordlist.txt', "w")
 for i in range(min_len,max_len+1):
     for j in product(character,repeat=i):
         word = "".join(j)
-        file_open.write(word)
-        file_open.write('\n')
+        file_open.write(word + '\n')
         counter+=1
 print('Wordlist of {} passwords created'.format(counter))
